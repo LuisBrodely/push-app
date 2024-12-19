@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "93eff988-41dd-42bd-b472-49d8689b6a0d"
+      }
+    },
+    "owner": "brodely"
   }
 }
