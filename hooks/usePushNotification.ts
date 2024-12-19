@@ -82,7 +82,7 @@ async function registerForPushNotificationsAsync() {
           projectId,
         })
       ).data;
-      console.log(pushTokenString);
+      console.log(Platform.OS, pushTokenString);
       return pushTokenString;
     } catch (e: unknown) {
       handleRegistrationError(`${e}`);
@@ -120,7 +120,7 @@ export const usePushNotification = () => {
     areListenersReady = true;
     
     notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
-        setNotifications([notification, ...notifications]);
+        setNotifications((notifications) => [...notifications, notification]);
       });
     
     responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
