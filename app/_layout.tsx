@@ -42,6 +42,7 @@ export default function RootLayout() {
         }}
       >
         <Stack.Screen name="index" options={{ title: "PushApp" }} />
+        <Stack.Screen name="index-demo" options={{ title: "PushApp" }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
